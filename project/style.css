@@ -1,0 +1,145 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: "Gilroy"; 
+    box-sizing: border-box;
+    /* sbke liye ham target every tag and uska font sfamly giloroi kr do
+     */
+     font-family:"Gilroy" ;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+/* ye upar wala hga hi ye boiler hi hai */
+#main{
+
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+}
+
+#left{
+    width: 40%;
+    height: 100%;
+   position: relative;
+}
+
+#left #textcentre{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /*   position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); ye jis pe v likhoge vo centre ho jiga scrren pe par ham chahte hai ki left wale div me hi centre pe ho  to uske liye bas left me ek chej likhna hga position relative...jisse ki sare left div me hi hnge */
+}
+
+#textcentre h1{
+   font-size: 90px;
+   font-weight: 900;
+
+}
+#textcentre p{
+    /* opacity se ye hta hai ki jo black color hta hai vo transform ho jata hai and thoda gray dikhen lgta hai */
+
+    opacity: .10;
+    font-size: 18spx;
+    line-height: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+#textcentre a{
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid black;
+    /* niche underline k liye */
+    padding-bottom: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: .6 ;
+}
+
+#right{
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    /* par abhi ye niche ayega and hame left and right agl bgl chaiye isliye iske main div me dispkay flex krna hga */
+}
+#rtop{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    background-color: royalblue;
+}
+#rbottom{
+    width: 100%;
+    height: 50%;
+    background-image: url(https://images.unsplash.com/photo-1579829835941-290fde15d6df?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NHwxNzIyODQ2fHxlbnwwfHx8fHw%3D);
+background-size: cover;
+background-position: center;
+}
+#rtopleft{
+    width: 55%;
+    height: 100%;
+    /* yes ham yha pe v imgae dal skte hai bhai aise and usko us div me aise hi cover kr skte hai see it */
+
+background-image: url(https://images.unsplash.com/photo-1460643724600-11954f4f63dd?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NnwxNzIyODQ2fHxlbnwwfHx8fHw%3D);
+   background-size: cover;
+   background-position: center;
+}
+#rtopright{
+    width: 45%;
+    height: 100%;
+    background-image: url(https://images.unsplash.com/photo-1461783470466-185038239ee3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8OXwxNzIyODQ2fHxlbnwwfHx8fHw%3D);
+    background-size: cover;
+    background-position: bottom;
+}
+
+#lnavr{
+    display: flex;
+    align-items: center;
+}
+#lnav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding:20px 30px ;
+}
+#lnavr a{
+    margin-left: 20px;
+    /* kyuki anchor tag me na underline ata hai..and isse ham use underline hata skte hain */
+
+     text-decoration: none;
+
+    /* now in remix icon me twitter icon lakr usko anchor wale me dalo and so on */
+   color: black;
+   font-weight: 500;
+   font-size: 14px
+}
+
+#lnavr i{
+    color: royalblue;
+    font-size: 20px;
+}
+
+
+
+@media(max-width: 500px){
+    #main{
+        flex-direction: column;
+
+    }
+    #main #left{
+        width: 100%
+        
+    }
+    #main #right{
+        width: 100%;
+    }
+}
