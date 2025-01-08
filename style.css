@@ -1,0 +1,73 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: "Gilroy"; 
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+
+    width: 100%;
+    height: 100%;
+    background-color: #dadada;
+}
+#centre{
+
+    position: absolute;
+    left: 20%;
+    top: 50% ;
+    transform: translate(0%,-50%);
+    width: 70%;
+    height: 80%;
+}
+.imagecontainer{
+    /* jab tak position absolute nhi tha ye teeno div ek ke ek niche aa rha tha par psoition absolute pe ek ke upar ek aa jiga teeno image container wala div */
+    /* an upar me position ka container relative bna diya taki ye teeno us centre wale div ke andar hi rhe */
+overflow: hidden;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    /* background-color: yellow; */
+}
+img{
+    /* ham soch rhe hai ki iska background size cover kr dete to ye thik ata na */
+    /* ha, chahte hai ki vo ekdm div ke andar aye and background size cover k jise aye ekdm */
+
+    /* ab height se ham chahte hai ham chahte hai ki jitna v part bhar chal jaye image container k usko hidden kr dena */
+    /* isliye imagecontainer wale me overflow-hidden kra hai */
+    height: 100%;
+    /* height se isliye taki image na fix rhe jab v width ye sab increase ya decrease krein to */
+    
+    /*   width: 100%;
+    height: 100%;
+    object-fit: cover;  to ue 3 property aise hai ki vo div ko puri trh se ache se cover kr legi ye  and jo v div se bada hota vo hidden ho jata  */
+
+}
+
+#one{
+    width: 0%;
+}
+
+.text{
+    /* overflow hidden se ye hota hai ki jo v us div me se koi content bahar gya to usko hide kr dega ye */
+    position: absolute;
+    bottom: 15%;
+    left: -10%;
+    z-index: 999;
+    overflow: hidden;
+ width:400px;
+ height: 100px;
+}
+
+.text h1{
+    top: 100px;
+    font-size: 6vw;
+    position: absolute; 
+}
+
+
+/* yha css khtam hota hai ab ham animation start krne wale hai and usme lgne wala hai dhuadhar javascript me gsap  */
